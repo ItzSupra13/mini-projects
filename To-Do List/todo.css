@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #4900a8, #740efa);
+    padding: 10px;
+}
+
+.todoapp{
+    width: 100%;
+    background: #ffffff;
+    max-width: 550px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;;
+}
+
+.todoapp h2{
+    color: #000000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todoapp h2 img{
+    width: 40px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #e4e4e4;
+    padding: 0px 0px 0px 0px;
+    border-radius: 40px;
+}
+
+input{
+    flex:1;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    border-radius: 40px;
+    background: #e4e4e4;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: #740efa;
+    color: #ffffff;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 50px;
+}
+
+button:hover{
+    background: #6f00ff;
+}
+
+button:active{
+    background: #6300e5;
+}
+
+ul li{
+    list-style: none;
+    align-items: center;
+    background: #fafafa;
+    padding: 10px 20px 10px 40px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before{
+    flex: 1;
+    content: '';
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    top: 9px;
+    left: 9px;
+}
+
+ul li.checked{
+    background-image: url(images/checked.png);
+    background: #eeeded;
+    color:darkgray;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0px;
+    top: 7px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: darkgray
+}
+
+ul li span:hover{
+    color: #0a0a0a;
+    border-radius: 50%;
+    cursor: pointer;
+}
