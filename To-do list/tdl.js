@@ -23,8 +23,3 @@ for(list of lists){
         })
     })
 }
-
-//3rd Real World Project of the day. 
-// This wasnt so much self doing as I learned about "drop", "dragover" and "dragstart" event, but oh well, atleast I learned!
-
-// Let's aim for 5 simple Real World projects for the day (I'm jobless)
