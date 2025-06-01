@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/create" method="post">
+        <input type="text" placeholder="title goes here" name="title" required>
+        <textarea name="details" placeholder="Write body..." id="body"></textarea>
+        <input type="submit" value="Create task">
+    </form>
+    <% if (files.length > 0) { %>
+        <% files.forEach(function(val) { %>
+            <div>
+                <h2><%= val %></h2>
+                <a href="/file/<%= val %>">Read more</a>
+                <a href="/edit/<%= val %>">edit</a>
+                <form action="/delete" method="post">
+                    <input type="submit" value="delete" name="<%=val%>">
+                </form>
+            </div>
+        <% }); %>
+    <% } else { %>
+        <h1>No files found</h1>
+    <% } %>
+</body>
+</html>
